@@ -57,3 +57,9 @@ typings/
 # dotenv environment variables file
 .env
 
+
+C#/PokeTheCode\.Dumper/bin/
+
+C#/PokeTheCode\.Dumper/obj/
+
+C#/\.vs/
