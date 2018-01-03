@@ -1,0 +1,18 @@
+.header
+{
+    background: darkgreen;
+    color: white;
+    font-size: 14pt;
+    width: 90%;
+    border: solid grey 1pt;
+    margin: 5pt auto 5pt auto;
+}
+
+.close
+{
+    background: red;
+    float:right;
+    padding: 1pt;
+    font: 10pt bold;
+    margin: auto;
+}
