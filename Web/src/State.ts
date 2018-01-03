@@ -2,7 +2,7 @@ export class State {
     connected: boolean;
     client: WebSocket;
 
-    data: Data[] = [];
+    data: { key: string, data: Data }[] = [];
 }
 
 export class Data {

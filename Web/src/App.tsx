@@ -8,6 +8,15 @@ const logo = require('./logo.svg');
 
 class App extends React.Component<{}, State> {
 
+  remove(key:string) {
+    
+    this.setState({
+      data: this.state.data.filter(x => x.key != key)
+    });
+
+    this.forceUpdate();
+  }
+
   render() {
     let displays: JSX.Element[] = [];
 
@@ -15,7 +24,7 @@ class App extends React.Component<{}, State> {
       this.state.data.forEach(d => {
         displays.push(
           (
-            <Display {...d} OnClose={this.state.data.pop} />
+            <Display key={d.key} {...d.data} OnClose={() => this.remove(d.key) } />
           )
         );
       });

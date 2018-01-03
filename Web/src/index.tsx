@@ -44,6 +44,6 @@ function OnMessage(data: MessageEvent) {
   let d = new Data();
   d.data = data.data;
 
-  state.data.push(d);
+  state.data.push({ key: (Math.random() * 10000000000).toString(), data: d });
   app.setState(state);
 }

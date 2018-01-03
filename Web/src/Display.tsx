@@ -3,13 +3,15 @@ import { Data } from './State';
 
 import './Display.css'
 
-export class Display extends React.Component<Data & { OnClose?:{():void } }, {}> {
+export class Display extends React.Component<Data & { OnClose:{ ():void } }, {}> {
 
   render() {
     return (
       <div className="header">
-        TypeName: <a href={void{}} className="close">X</a>
+        TypeName: <button onClick={ this.props.OnClose } className="close">X</button>
       </div>
     );
   }
+
+  doNothing(){}
 }
