@@ -3,6 +3,10 @@
     background: darkgreen;
     color: white;
     font-size: 14pt;
+}
+
+.content
+{
     width: 90%;
     border: solid grey 1pt;
     margin: 5pt auto 5pt auto;
@@ -16,4 +20,36 @@
     font: 10pt bold;
     margin: auto;
     color: white;
+}
+
+.cell
+{
+    border: 1px solid grey
+}
+
+.string
+{
+    color: red
+}
+
+.number
+{
+    color: aliceblue
+}
+
+.enclosure
+{
+    width:inherit
+}
+
+.content > div > table
+{
+    width: 100%;
+    text-align: left;
+    border: 1px solid grey;
+}
+
+.content > div > table > tr:nth-child(even)
+{
+    background: lightgray;
 }
