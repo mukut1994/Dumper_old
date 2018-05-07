@@ -28,6 +28,7 @@ function SetupClient() {
   client.addEventListener('open', OnConnected);
   client.addEventListener('close', OnClose);
   client.addEventListener('message', OnMessage);
+  client.addEventListener('error', SetupClient);
 }
 
 function OnConnected(socket: Event) {

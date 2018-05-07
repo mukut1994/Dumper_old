@@ -9,7 +9,7 @@ using WebSocketSharp.Server;
 
 namespace PokeTheCode.Dumper
 {
-    public static class Extension
+    public static class DumperExtension
     {
         private class Link
         {
@@ -17,7 +17,7 @@ namespace PokeTheCode.Dumper
             public string Value;
         }
 
-        private static WebSocketServer server = new WebSocketServer(port: 1234);
+        private static WebSocketServer server = new WebSocketServer(port: 3020);
         private static ManualResetEvent waiter = new ManualResetEvent(false);
         private static JsonSerializerSettings jsonSettings = new JsonSerializerSettings
         {
@@ -59,7 +59,7 @@ namespace PokeTheCode.Dumper
             }
         }
 
-        static Extension()
+        static DumperExtension()
         {
             server.AddWebSocketService<Handler>("/");
             server.Start();

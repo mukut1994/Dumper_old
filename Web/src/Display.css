@@ -34,7 +34,7 @@
 
 .number
 {
-    color: aliceblue
+    color: darkblue
 }
 
 .enclosure
@@ -52,4 +52,9 @@
 .content > div > table > tr:nth-child(even)
 {
     background: lightgray;
+}
+
+.subheader
+{
+    color: lightblue
 }

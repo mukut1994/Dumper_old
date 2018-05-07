@@ -8,10 +8,10 @@ const logo = require('./logo.svg');
 
 class App extends React.Component<{}, State> {
 
-  remove(key:string) {
+  remove(key: string) {
     
     this.setState({
-      data: this.state.data.filter(x => x.key != key)
+      data: this.state.data.filter(x => x.key !== key)
     });
 
     this.forceUpdate();
@@ -22,9 +22,11 @@ class App extends React.Component<{}, State> {
 
     if (this.state != null) {
       this.state.data.forEach(d => {
+        let s = new State();
+
         displays.push(
           (
-            <Display key={d.key} {...d.data} OnClose={() => this.remove(d.key) } />
+            <Display key={d.key} Data={d.data} State={s} OnClose={() => this.remove(d.key)} />
           )
         );
       });
@@ -34,7 +36,7 @@ class App extends React.Component<{}, State> {
       <div className="App">
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h2>Dumper Connected: {this.state != null && this.state.connected ? 'true' : 'false'}</h2>
+          <h2>Dumper Connected: {this.state !== null && this.state.connected ? 'true' : 'false'}</h2>
         </div>
         <div>
           {displays}
